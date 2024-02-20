@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Portfolio" />
+    <meta
+      property="og:description"
+      content="Showcasing My Creative Work and Expertise"
+    />
+    <meta
+      property="og:image"
+      content="https://oburuephraim.github.io/IMG_1018.CR2.jpg"
+    />
+    <meta property="og:url" content="https://oburuephraim.github.io/" />
+    <meta property="og:type" content="website" />
     <title>Portfolio</title>
     <!-- Bootstrap CSS -->
     <link
@@ -78,13 +89,11 @@
           border-right: calc(100% - 3px) solid rgba(0, 0, 0, 1);
         }
       }
-      body {
-        background-image: url("stylish background.jpg");
-        background-attachment: fixed;
-      }
+
       body {
         position: relative;
-        background-image: url("stylish background.jpg");
+        background-image: url("code.jpg");
+        background-size: cover;
         background-attachment: fixed;
       }
 
@@ -96,10 +105,10 @@
         width: 100%;
         height: 100%;
         background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
+          100,
+          200,
+          300,
+          0.4
         ); /* Adjust the last value (0.5) for opacity */
         z-index: -1; /* Ensure the overlay is behind other content */
       }
@@ -119,7 +128,7 @@
     </style>
   </head>
   <body class="">
-    <div class="container" style="overflow-x: hidden">
+    <div class="container">
       <div class="header-section row p-3">
         <div class="col-8">
           <h1 class="display-3 fw-bold text">Portfolio</h1>
@@ -128,17 +137,17 @@
         <div class="col-4">
           <div id="contentDiv" class="content text-center"></div>
         </div>
-
-        <hr />
       </div>
+    </div>
+    <hr />
 
+    <div class="container">
       <!-- Information about the person -->
 
       <div class="row g-0">
         <!-- Image column -->
         <div
           class="col-md-4 d-flex align-items-center justify-content-center p-2"
-          style="overflow-x: hidden"
         >
           <div class="myanimate">
             <a
@@ -205,7 +214,7 @@
         </div>
 
         <!-- Content column -->
-        <div class="col-md-8 p-2" style="overflow-x: hidden">
+        <div class="col-md-8 p-2">
           <!-- Accordions -->
           <div class="accordion myanimate" id="aboutAccordion">
             <!-- Software Development Expertise -->
@@ -336,7 +345,7 @@
 
       <!-- Portfolio section -->
     </div>
-    <div class="container mt-5" style="overflow-x: hidden">
+    <div class="container mt-5">
       <div class="header-section p-3">
         <h4 class="display-6 fw-bold text">Frequently Asked Questions</h4>
       </div>
@@ -469,7 +478,7 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5 d-none" style="overflow-x: hidden">
+    <div class="container mt-5 d-none">
       <div class="d-flex align-items-center myanimate">
         <button
           class="btn btn-primary btn-open-modal"
@@ -492,7 +501,7 @@
       </div>
     </div>
 
-    <div class="container py-5" style="overflow-x: hidden">
+    <div class="container py-5">
       <div class="header-section p-3">
         <h1 class="display-6 fw-bold text">My Creative Work</h1>
       </div>
@@ -593,7 +602,7 @@
         </div>
       </div>
     </div>
-    <div class="container" style="overflow-x: hidden">
+    <div class="container">
       <hr />
       <div class="footer-section py-3 text-center myanimate">
         <p>&copy; 2024 Oburu Ephraim. All rights reserved.</p>

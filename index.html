@@ -121,8 +121,11 @@
               />
             </a>
             <div style="background-color: #ffffff; color: #333; padding: 20px">
-              <h5>Oburu Ephraim</h5>
+              <div class="typing-effect">
+                <h4 class="display-6 fw-bold text m-0 p-0">Oburu Ephraim</h4>
+              </div>
               <p>Contact Information</p>
+              <hr />
               <p>
                 <i class="fas fa-envelope text-primary"></i>
                 <a href="mailto:oburuephraim1@example.com" class="text-primary"
@@ -770,9 +773,9 @@
       function handleIntersection(entries, observer) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add(".start-typing");
+            entry.target.classList.add("start-typing");
           } else {
-            entry.target.classList.remove(".start-typing");
+            entry.target.classList.remove("start-typing");
           }
         });
       }
@@ -785,15 +788,18 @@
       };
 
       // Create an Intersection Observer instance
-      const observer = new IntersectionObserver(handleIntersection, options);
+      const typingObserver = new IntersectionObserver(
+        handleIntersection,
+        options
+      );
 
-      // Get the element to observe
-      const element = document.querySelector(".text");
+      // Get the elements to observe
+      const typingElements = document.querySelectorAll(".text");
 
-      // Start observing the element
-      if (element) {
-        observer.observe(element);
-      }
+      // Start observing the elements
+      typingElements.forEach((element) => {
+        typingObserver.observe(element);
+      });
     </script>
   </body>
 </html>

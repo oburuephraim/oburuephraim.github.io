@@ -9,6 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Font Awesome CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -43,40 +47,25 @@
 
       /* use with overflow hidden to prevent horizontal scroll */
 
-      .fly-in-element {
-        transform: translateX(50%);
-        /* Start with a translateX to move the element from the right */
-        opacity: 0;
-        /* Start with 0 opacity to make it invisible */
-        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-      }
-
-      .fly-in-element.in-viewport {
-        transform: translateX(0);
-        /* Move the element back to its original position when in viewport */
-        opacity: 1;
-        /* Make the element fully visible when in viewport */
-      }
-
       .text {
         white-space: nowrap;
         overflow: hidden;
-        width: 0;
-        animation: typing 5s steps(25) 0.5s forwards,
-          /* Typing animation */ cursor-blink 1s infinite step-end; /* Cursor blinking animation */
       }
 
-      /* Style for when typing animation starts */
-      .start-typing .text {
-        animation-play-state: running;
+      .animate {
+        animation: typing 5s steps(25) 0.5s forwards,
+          cursor-blink 1s infinite step-end;
       }
 
       @keyframes typing {
         0% {
           width: 0;
         }
-        100% {
+        90% {
           width: 100%;
+        }
+        100% {
+          width: 100%; /* Keeps the width constant after animation completes */
         }
       }
 
@@ -86,7 +75,7 @@
           border-right: 3px solid transparent;
         }
         50% {
-          border-right: 3px solid rgba(0, 0, 0, 0);
+          border-right: calc(100% - 3px) solid rgba(0, 0, 0, 1);
         }
       }
     </style>
@@ -108,7 +97,7 @@
           class="col-md-4 d-flex align-items-center justify-content-center p-2"
           style="overflow-x: hidden"
         >
-          <div class="fly-in-element">
+          <div class="myanimate">
             <a
               href="#"
               data-bs-toggle="modal"
@@ -175,7 +164,7 @@
         <!-- Content column -->
         <div class="col-md-8 p-2" style="overflow-x: hidden">
           <!-- Accordions -->
-          <div class="accordion fly-in-element" id="aboutAccordion">
+          <div class="accordion myanimate" id="aboutAccordion">
             <!-- Software Development Expertise -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="softwareHeading">
@@ -309,7 +298,7 @@
         <h4 class="display-6 fw-bold">Frequently Asked Questions</h4>
       </div>
 
-      <div class="accordion fly-in-element" id="faqAccordion">
+      <div class="accordion myanimate" id="faqAccordion">
         <!-- Question 1 -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -438,7 +427,7 @@
       </div>
     </div>
     <div class="container mt-5 d-none" style="overflow-x: hidden">
-      <div class="d-flex align-items-center fly-in-element">
+      <div class="d-flex align-items-center myanimate">
         <button
           class="btn btn-primary btn-open-modal"
           data-src="software development contract.pdf"
@@ -466,7 +455,7 @@
           <h1 class="display-6 fw-bold">My Creative Work</h1>
         </div>
       </div>
-      <div class="row fly-in-element">
+      <div class="row myanimate">
         <div class="carousel-container overflow-hidden">
           <div class="carousel-track d-flex">
             <div class="card col-12 col-md-4 mb-4">
@@ -565,7 +554,7 @@
     </div>
     <div class="container" style="overflow-x: hidden">
       <hr />
-      <div class="footer-section py-3 text-center fly-in-element">
+      <div class="footer-section py-3 text-center myanimate">
         <p>&copy; 2024 Oburu Ephraim. All rights reserved.</p>
       </div>
     </div>
@@ -746,60 +735,60 @@
         moveCarouselAuto(5000);
       });
 
-      const flyInElements = document.querySelectorAll(".fly-in-element");
-
-      const flyInObserverOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.2, // Adjust threshold as needed
-      };
-
-      const flyInObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-viewport");
-          } else {
-            entry.target.classList.remove("in-viewport");
-          }
-        });
-      }, flyInObserverOptions);
-
-      flyInElements.forEach((element) => {
-        flyInObserver.observe(element);
-      });
-
       // Function to start the typing animation when the element comes into view
-      // Function to handle intersection changes
-      function handleIntersection(entries, observer) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("start-typing");
-          } else {
-            entry.target.classList.remove("start-typing");
-          }
+      function observeIntersection(elements, options, classNames) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (Array.isArray(classNames)) {
+                classNames.forEach((className) => {
+                  entry.target.classList.add(className);
+                });
+              } else {
+                entry.target.classList.add(classNames);
+              }
+
+              // Once animation is complete, remove the classes
+              entry.target.addEventListener(
+                "animationend",
+                () => {
+                  // Check if the element is still in the viewport
+                  if (entry.isIntersecting) {
+                    if (Array.isArray(classNames)) {
+                      classNames.forEach((className) => {
+                        entry.target.classList.remove(className);
+                      });
+                    } else {
+                      entry.target.classList.remove(classNames);
+                    }
+                  }
+                },
+                { once: true }
+              );
+            }
+          });
+        }, options);
+
+        elements.forEach((element) => {
+          observer.observe(element);
         });
       }
 
-      // Options for the Intersection Observer
-      const options = {
-        root: null, // Use the viewport as the root
-        rootMargin: "0px", // No margin
-        threshold: 0.5, // Trigger when at least 50% of the element is visible
+      // Usage example:
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.2,
       };
+      // Usage examples:
+      const textElements = document.querySelectorAll(".text");
+      observeIntersection(textElements, observerOptions, "animate");
 
-      // Create an Intersection Observer instance
-      const typingObserver = new IntersectionObserver(
-        handleIntersection,
-        options
-      );
-
-      // Get the elements to observe
-      const typingElements = document.querySelectorAll(".text");
-
-      // Start observing the elements
-      typingElements.forEach((element) => {
-        typingObserver.observe(element);
-      });
+      const myElements = document.querySelectorAll(".myanimate");
+      observeIntersection(myElements, observerOptions, [
+        "animate__animated",
+        "animate__fadeInRight",
+      ]);
     </script>
   </body>
 </html>

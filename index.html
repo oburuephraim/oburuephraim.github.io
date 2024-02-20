@@ -78,13 +78,54 @@
           border-right: calc(100% - 3px) solid rgba(0, 0, 0, 1);
         }
       }
+      body {
+        background-image: url("stylish background.jpg");
+        background-attachment: fixed;
+      }
+      body {
+        position: relative;
+        background-image: url("stylish background.jpg");
+        background-attachment: fixed;
+      }
+
+      body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Adjust the last value (0.5) for opacity */
+        z-index: -1; /* Ensure the overlay is behind other content */
+      }
+      .content {
+        position: relative;
+        width: 100%; /* Make the div responsive */
+        height: 100%; /* Make the div responsive */
+        overflow: hidden; /* Hide overflowing content */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4vw; /* Adjust the font size using viewport width */
+      }
+      .transition-item {
+        transition: opacity 0.5s ease; /* Add transition effect */
+      }
     </style>
   </head>
   <body class="">
     <div class="container" style="overflow-x: hidden">
-      <div class="header-section py-2">
-        <h1 class="display-3 fw-bold text">Portfolio</h1>
-        <p class="lead">Showcasing My Creative Work and Expertise</p>
+      <div class="header-section row p-3">
+        <div class="col-8">
+          <h1 class="display-3 fw-bold text">Portfolio</h1>
+          <p class="lead">Showcasing My Creative Work and Expertise</p>
+        </div>
+        <div class="col-4"><div id="contentDiv" class="content"></div></div>
 
         <hr />
       </div>
@@ -294,7 +335,7 @@
       <!-- Portfolio section -->
     </div>
     <div class="container mt-5" style="overflow-x: hidden">
-      <div class="header-section py-2">
+      <div class="header-section p-3">
         <h4 class="display-6 fw-bold text">Frequently Asked Questions</h4>
       </div>
 
@@ -450,15 +491,13 @@
     </div>
 
     <div class="container py-5" style="overflow-x: hidden">
-      <div class="header-section py-2">
-        <div class="container">
-          <h1 class="display-6 fw-bold text">My Creative Work</h1>
-        </div>
+      <div class="header-section p-3">
+        <h1 class="display-6 fw-bold text">My Creative Work</h1>
       </div>
       <div class="row myanimate">
         <div class="carousel-container overflow-hidden">
           <div class="carousel-track d-flex">
-            <div class="card col-12 col-md-4 mb-4">
+            <div class="card col-12 col-md-4 m-2">
               <div class="card-body">
                 <h5 class="card-title">Social Teams</h5>
                 <img
@@ -474,7 +513,7 @@
                 <p class="card-text"><i class="fab fa-facebook-square"></i></p>
               </div>
             </div>
-            <div class="card col-12 col-md-4 mb-4">
+            <div class="card col-12 col-md-4 m-2">
               <div class="card-body">
                 <h5 class="card-title">Elder Care Initiative</h5>
                 <img
@@ -490,7 +529,7 @@
                 <p class="card-text"><i class="fas fa-users"></i></p>
               </div>
             </div>
-            <div class="card col-12 col-md-4 mb-4">
+            <div class="card col-12 col-md-4 m-2">
               <div class="card-body">
                 <h5 class="card-title">Blog Ruboni</h5>
                 <img
@@ -506,7 +545,7 @@
                 <p class="card-text"><i class="fas fa-blog"></i></p>
               </div>
             </div>
-            <div class="card col-12 col-md-4 mb-4">
+            <div class="card col-12 col-md-4 m-2">
               <div class="card-body">
                 <h5 class="card-title">Meetings Manager</h5>
                 <img
@@ -522,7 +561,7 @@
                 <p class="card-text"><i class="fas fa-calendar-alt"></i></p>
               </div>
             </div>
-            <div class="card col-12 col-md-4 mb-4">
+            <div class="card col-12 col-md-4 m-2">
               <div class="card-body">
                 <h5 class="card-title">Safe Sail</h5>
                 <img
@@ -542,7 +581,7 @@
           </div>
         </div>
         <!-- Buttons for navigation -->
-        <div class="container mt-3">
+        <div class="container mt-2">
           <div class="row">
             <div class="col text-center">
               <button id="prevButton" class="btn btn-primary">Previous</button>
@@ -792,6 +831,45 @@
         "animate__animated",
         "animate__fadeInRight",
       ]);
+
+      const content = [
+        "<span class='transition-item' style='color: blue; font-weight: bold; font-style: italic;'>Hi</span>",
+        "<span class='transition-item' style='color: green;font-weight: bold; font-style: italic;'>Check Out</span>",
+        "<span class='transition-item' style='color: red; font-weight: bold; font-style: italic;'>My Portfolio</span>",
+        "<span class='transition-item' style='color: orange; font-weight: bold; font-style: italic;'>Reach Out</span>",
+        "<span class='transition-item' style='color: purple; font-weight: bold; font-style: italic;'>And Come</span>",
+        "<span class='transition-item' style='color: brown; font-weight: bold; font-style: italic;'>Again for</span>",
+        "<span class='transition-item' style='color: teal; font-weight: bold; font-style: italic;'>More</span>",
+      ]; // Array of content to display
+      // Array of content to display
+      let currentIndex = 0; // Index to keep track of the current item being displayed
+
+      // Function to display content one at a time
+      function displayContent() {
+        const container = document.getElementById("contentDiv"); // Get the specific div by its ID
+
+        // Function to update the displayed content
+        function updateContent() {
+          container.innerHTML = content[currentIndex];
+          if (currentIndex === content.length - 1) {
+            // If it's the last item, wait longer before looping back
+            setTimeout(() => {
+              currentIndex = 0; // Reset to the beginning of the array
+            }, 5000); // Wait 5 seconds
+          } else {
+            currentIndex++; // Move to the next item in the array
+          }
+        }
+
+        // Call updateContent initially
+        updateContent();
+
+        // Set interval to update the displayed content every 2 seconds
+        setInterval(updateContent, 1000);
+      }
+
+      // Call the function to display content
+      displayContent();
     </script>
   </body>
 </html>

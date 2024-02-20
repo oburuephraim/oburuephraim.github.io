@@ -630,12 +630,15 @@
 
       modalButtons.forEach((button) => {
         button.addEventListener("click", () => {
-          const iframeSrc = button.getAttribute("data-src");
+          const iframeSrc =
+            button.getAttribute("data-src") + "?t=" + new Date().getTime(); // Adding cache-busting parameter
+          modalIframe.onload = () => {
+            const modal = new bootstrap.Modal(
+              document.getElementById("exampleModal")
+            );
+            modal.show();
+          };
           modalIframe.src = iframeSrc;
-          const modal = new bootstrap.Modal(
-            document.getElementById("exampleModal")
-          );
-          modal.show();
         });
       });
 

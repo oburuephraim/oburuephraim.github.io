@@ -29,7 +29,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      .dancing-script-text {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
       .accordion-header .accordion-button {
         background-color: rgb(133, 190, 243);
         color: #000000;
@@ -844,14 +856,14 @@
       ]);
 
       const content = [
-        "<span class='transition-item' style='color: blue; font-weight: bold; font-style: italic;'>Hi</span>",
-        "<span class='transition-item' style='color: green;font-weight: bold; font-style: italic;'>Check Out</span>",
-        "<span class='transition-item' style='color: red; font-weight: bold; font-style: italic;'>My Portfolio</span>",
-        "<span class='transition-item' style='color: orange; font-weight: bold; font-style: italic;'>Reach Out</span>",
-        "<span class='transition-item' style='color: purple; font-weight: bold; font-style: italic;'>And Come</span>",
-        "<span class='transition-item' style='color: brown; font-weight: bold; font-style: italic;'>Again for</span>",
-        "<span class='transition-item' style='color: teal; font-weight: bold; font-style: italic;'>More</span>",
-      ]; // Array of content to display
+        "<span class='transition-item dancing-script-text' style='color: blue; font-weight: bold; font-style: italic;'>Hi</span>",
+        "<span class='transition-item dancing-script-text' style='color: green;font-weight: bold; font-style: italic;'>Check Out</span>",
+        "<span class='transition-item dancing-script-text' style='color: red; font-weight: bold; font-style: italic;'>My Portfolio</span>",
+        "<span class='transition-item dancing-script-text' style='color: orange; font-weight: bold; font-style: italic;'>Reach Out</span>",
+        "<span class='transition-item dancing-script-text' style='color: purple; font-weight: bold; font-style: italic;'>And Come</span>",
+        "<span class='transition-item dancing-script-text' style='color: brown; font-weight: bold; font-style: italic;'>Again for</span>",
+        "<span class='transition-item dancing-script-text' style='color: teal; font-weight: bold; font-style: italic;'>More</span>",
+      ];
       // Array of content to display
       let currentIndex = 0; // Index to keep track of the current item being displayed
 

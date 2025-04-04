@@ -14,6 +14,18 @@
     />
     <meta property="og:url" content="https://oburuephraim.github.io/" />
     <meta property="og:type" content="website" />
+    <meta
+      name="description"
+      content="Portfolio of Oburu Ephraim showcasing creative work, technical expertise, and professional skills."
+    />
+    <meta
+      name="keywords"
+      content="Portfolio, Oburu Ephraim, Software Development, Data Analysis, Creative Work, Skills"
+    />
+    <meta name="author" content="Oburu Ephraim" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Oburu Ephraim Portfolio" />
     <title>Portfolio</title>
     <!-- Bootstrap CSS -->
     <link
@@ -32,593 +44,336 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@400..700&family=Pacifico&family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
     <style>
+      /* General Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        background-color: #f4f4f9;
+        line-height: 1.6; /* Improved line height for better readability */
+      }
+
+      h1,
+      h2,
+      h5 {
+        font-family: "Pacifico", cursive;
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 2.8rem; /* Standardized font size for headings */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+      }
+
+      p,
+      label,
+      .list-group-item {
+        font-family: "Patrick Hand", cursive; /* Human handwriting font */
+        color: #555;
+        font-size: 1.5rem; /* Increased font size for better visibility */
+        margin-bottom: 15px; /* Added spacing between paragraphs */
+      }
+
       .dancing-script-text {
         font-family: "Dancing Script", cursive;
-        font-optical-sizing: auto;
+        font-size: 2.2rem; /* Slightly increased font size for emphasis */
+        color: #8e44ad;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px; /* Added spacing below */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+      }
+
+      /* Reusable Gradient Section */
+      .gradient-section {
+        background: linear-gradient(135deg, #6dd5ed, #2193b0);
+        color: #ffffff;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px 20px; /* Added padding for better spacing */
+        margin: 20px 20px; /* Added margin for spacing between sections */
+      }
+
+      .gradient-section h1,
+      .gradient-section p {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .gradient-section h1 {
+        font-size: 3.2rem;
         font-weight: 700;
-        font-style: normal;
-      }
-      .accordion-header .accordion-button {
-        background-color: rgb(133, 190, 243);
-        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
       }
 
-      .footer-section {
-        background-color: rgb(255, 255, 255);
-        color: #005ba6;
-      }
-      .header-section {
-        background-color: rgb(255, 255, 255);
-        color: #005ba6;
-      }
-      .btn-primary {
-        background-color: rgb(133, 190, 243);
-        border: #ffffff solid 1px;
-        color: black;
-      }
-      .btn-primary:hover {
-        background-color: #005ba6;
-      }
-      .accordion-button:not(.collapsed) {
-        background-color: #005ba6;
-        color: rgb(255, 255, 255);
+      .gradient-section p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 0;
       }
 
-      /* use with overflow hidden to prevent horizontal scroll */
-
-      .text {
-        white-space: nowrap;
-        overflow: hidden;
+      /* Accordion Styles */
+      .accordion-header button {
+        font-family: "Pacifico", cursive; /* Consistent font style for headings */
+        font-size: 1.8rem; /* Larger font size for accordion headings */
+        font-weight: 700; /* Bold font weight */
+        color: #2c3e50; /* Deep blue-gray for headings */
+        background-color: #f4f4f9; /* Light background for contrast */
+        border: none; /* Remove default border */
+        padding: 10px 15px; /* Add padding for better spacing */
+        text-align: left; /* Align text to the left */
       }
 
-      .animate {
-        animation: typing 5s steps(25) 0.5s forwards,
-          cursor-blink 1s infinite step-end;
+      .accordion-header button:hover {
+        background-color: #e8e8f0; /* Slightly darker background on hover */
+        color: #3498db; /* Vibrant blue for hover effect */
       }
 
-      @keyframes typing {
-        0% {
-          width: 0;
+      .accordion-body {
+        font-family: "Patrick Hand", cursive; /* Consistent font style for content */
+        font-size: 1.5rem; /* Slightly smaller font size for content */
+        color: #555; /* Medium gray for body text */
+        padding: 15px; /* Add padding for better spacing */
+        background-color: #ffffff; /* White background for content */
+        border: 1px solid #ddd; /* Subtle border for separation */
+        border-top: none; /* Remove border overlap with heading */
+      }
+
+      /* Carousel Card Titles */
+      .card-title {
+        font-family: "Pacifico", cursive; /* Consistent font style */
+        font-size: 1.5rem; /* Reduced font size for better balance */
+        font-weight: 600; /* Slightly bold for emphasis */
+        color: #2c3e50; /* Deep blue-gray for titles */
+        margin-bottom: 10px; /* Added spacing below titles */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+      }
+
+      .card-title:hover {
+        color: #3498db; /* Vibrant blue on hover for interactivity */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .gradient-section {
+          padding: 20px;
         }
-        90% {
-          width: 100%;
+        .gradient-section h1 {
+          font-size: 2.7rem;
         }
-        100% {
-          width: 100%; /* Keeps the width constant after animation completes */
+        .gradient-section p {
+          font-size: 1.3rem;
         }
-      }
-
-      @keyframes cursor-blink {
-        0%,
-        100% {
-          border-right: 3px solid transparent;
+        .dancing-script-text {
+          font-size: 1.9rem;
         }
-        50% {
-          border-right: calc(100% - 3px) solid rgba(0, 0, 0, 1);
+        p,
+        label,
+        .list-group-item {
+          font-size: 1.2rem; /* Adjusted for smaller screens */
         }
       }
 
-      body {
-        position: relative;
-        background-image: url("code.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-      }
-
-      body::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(
-          100,
-          200,
-          300,
-          0.4
-        ); /* Adjust the last value (0.5) for opacity */
-        z-index: -1; /* Ensure the overlay is behind other content */
-      }
-      .content {
-        position: relative;
-        width: 100%; /* Make the div responsive */
-        height: 100%; /* Make the div responsive */
-        overflow: hidden; /* Hide overflowing content */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 4vw; /* Adjust the font size using viewport width */
-      }
-      .transition-item {
-        transition: opacity 0.5s ease; /* Add transition effect */
+      @media (max-width: 576px) {
+        .gradient-section h1 {
+          font-size: 2.3rem;
+        }
+        .gradient-section p {
+          font-size: 1.1rem;
+        }
+        .dancing-script-text {
+          font-size: 1.7rem;
+        }
+        p,
+        label,
+        .list-group-item {
+          font-size: 1.1rem; /* Further adjusted for very small screens */
+        }
       }
     </style>
   </head>
   <body class="">
-    <div class="container">
-      <div class="header-section row p-3">
-        <div class="col-8">
-          <h1 class="display-3 fw-bold text">Portfolio</h1>
-          <p class="lead">Showcasing My Creative Work and Expertise</p>
-        </div>
-        <div class="col-4">
-          <div id="contentDiv" class="content text-center"></div>
-        </div>
-      </div>
+    <!-- In-page Navigation -->
+    <nav class="fixed-bottom bg-light p-3 text-center shadow">
+      <a href="#aboutSection" class="btn btn-primary btn-sm me-2">About</a>
+      <a href="#skills" class="btn btn-success btn-sm me-2">Skills</a>
+      <a href="#ctaSection" class="btn btn-info btn-sm me-2">Call to Action</a>
+      <a href="#dynamicSections" class="btn btn-warning btn-sm me-2">More</a>
+      <a href="#" class="btn btn-secondary btn-sm">Up</a>
+    </nav>
+    <!-- End of In-page Navigation -->
+
+    <div class="gradient-section">
+      <h1>Welcome to My Creative Space</h1>
+      <p>Showcasing my expertise, creativity, and professional achievements.</p>
     </div>
     <hr />
-    <div class="container">
-      <!-- Information about the person -->
-
-      <div class="row g-0">
-        <!-- Image column -->
-        <div
-          class="col-md-4 d-flex align-items-center justify-content-center p-2"
-          style="overflow-x: hidden"
-        >
-          <div class="myanimate">
-            <a
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#profilePictureModal"
-            >
-              <img
-                src="IMG_1018.CR2.jpg"
-                alt="Profile Picture"
-                class="img-fluid rounded"
-              />
-            </a>
-            <div style="background-color: #ffffff; color: #333; padding: 20px">
-              <div class="typing-effect">
-                <h4 class="display-6 fw-bold text m-0 p-0">Oburu Ephraim</h4>
-              </div>
-              <p>Contact Information</p>
-              <hr />
-              <p>
-                <i class="fas fa-envelope text-primary"></i>
-                <a href="mailto:oburuephraim1@example.com" class="text-primary"
-                  >Email</a
-                >
-              </p>
-              <p>
-                <i class="fab fa-whatsapp text-success"></i>
-                <a
-                  href="https://wa.me/256777233322"
-                  target="_blank"
-                  class="text-success"
-                  >WhatsApp</a
-                >
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt text-info"></i>
-                <a
-                  href="https://maps.google.com/?q=38b+Ssebowa+Rd,+Kampala"
-                  target="_blank"
-                  class="text-info"
-                  >Address</a
-                >
-              </p>
-              <p class="d-none">
-                <i class="fab fa-linkedin text-primary"></i>
-                <a
-                  href="https://www.linkedin.com/in/oburuephraim2"
-                  target="_blank"
-                  class="text-primary"
-                  >LinkedIn Profile</a
-                >
-              </p>
-              <p>
-                <i class="fab fa-github text-dark"></i>
-                <a
-                  href="https://github.com/oburuephraim"
-                  target="_blank"
-                  class="text-dark"
-                  >Github Profile</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content column -->
-        <div class="col-md-8 p-2" style="overflow-x: hidden">
-          <!-- Accordions -->
-          <div class="accordion myanimate" id="aboutAccordion">
-            <!-- Software Development Expertise -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="softwareHeading">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#softwareCollapse"
-                  aria-expanded="true"
-                  aria-controls="softwareCollapse"
-                >
-                  <span class="fw-bold">Software Development Expertise</span>
-                </button>
-              </h2>
-              <div
-                id="softwareCollapse"
-                class="accordion-collapse collapse show"
-                aria-labelledby="softwareHeading"
-                data-bs-parent="#aboutAccordion"
+    <div class="container mb-5">
+      
+    
+    <!-- Information about the person -->
+    <div class="row g-0">
+      <!-- Image column -->
+      <div
+        class="col-md-4 d-flex align-items-center justify-content-center p-2"
+        style="overflow-x: hidden"
+      >
+        <div class="card shadow-lg">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#profilePictureModal"
+          >
+            <img
+              src="IMG_1018.CR2.jpg"
+              alt="Profile Picture"
+              class="img-fluid"
+            />
+          </a>
+          <div class="card-body text-center">
+            <h4 class="card-title text-primary">Oburu Ephraim</h4>
+            <p class="text-muted">Contact Information</p>
+            <hr />
+            <p>
+              <i class="fas fa-envelope text-primary"></i>
+              <a
+                href="mailto:oburuephraim1@example.com"
+                class="text-decoration-none"
+                >Email Me</a
               >
-                <div class="accordion-body">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <i class="fas fa-laptop-code me-2"></i>
-                      <span class="fw-bold">Scalable Applications:</span> I
-                      empower businesses by building scalable web applications,
-                      optimize operations, and enhance online presence.
-                    </li>
-                    <li class="list-group-item">
-                      <i class="fas fa-database me-2"></i>
-                      <span class="fw-bold">Database Design:</span> I create
-                      structured and optimized solutions for efficient data
-                      management and informed decision-making.
-                    </li>
-                    <li class="list-group-item">
-                      <i class="fab fa-bootstrap me-2"></i>
-                      <span class="fw-bold"> Responsive UI:</span> I leverage
-                      latest tools to create responsive and dynamic user
-                      interfaces, ensuring seamless user experiences across
-                      devices and enhancing interactivity.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Data Analysis and Visualization Proficiency -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="dataHeading">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#dataCollapse"
-                  aria-expanded="false"
-                  aria-controls="dataCollapse"
-                >
-                  <span class="fw-bold">
-                    Data Analysis and Visualization Proficiency</span
-                  >
-                </button>
-              </h2>
-              <div
-                id="dataCollapse"
-                class="accordion-collapse collapse"
-                aria-labelledby="dataHeading"
-                data-bs-parent="#aboutAccordion"
+            </p>
+            <p>
+              <i class="fab fa-whatsapp text-success"></i>
+              <a
+                href="https://wa.me/256777233322"
+                target="_blank"
+                class="text-decoration-none"
+                >Chat on WhatsApp</a
               >
-                <div class="accordion-body">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <i class="fas fa-chalkboard-teacher me-2"></i>
-                      <span class="fw-bold"> Training:</span> I conduct training
-                      sessions to upskill teams in GIS technologies and data
-                      analysis techniques.
-                    </li>
-                    <li class="list-group-item">
-                      <i class="fas fa-chart-bar me-2"></i>
-                      <span class="fw-bold"> Data Analysis:</span> I perform
-                      in-depth analysis of spatial and non-spatial data sets to
-                      unlock valuable insights.
-                    </li>
-                    <li class="list-group-item">
-                      <i class="fas fa-chart-pie me-2"></i>
-                      <span class="fw-bold"> Visualization:</span> I create
-                      visually compelling data visualizations to communicate
-                      findings effectively.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Development -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="portfolioHeading">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#portfolioCollapse"
-                  aria-expanded="false"
-                  aria-controls="portfolioCollapse"
-                >
-                  <span class="fw-bold">Portfolio Development</span>
-                </button>
-              </h2>
-              <div
-                id="portfolioCollapse"
-                class="accordion-collapse collapse"
-                aria-labelledby="portfolioHeading"
-                data-bs-parent="#aboutAccordion"
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt text-info"></i>
+              <a
+                href="https://maps.google.com/?q=38b+Ssebowa+Rd,+Kampala"
+                target="_blank"
+                class="text-info"
+                >View Location</a
               >
-                <div class="accordion-body">
-                  <p>
-                    I develop portfolios showcasing a diverse range of projects
-                    and accomplishments, highlighting the value and expertise
-                    businesses bring to the table.
-                  </p>
-                </div>
-              </div>
-            </div>
+            </p>
+            <p class="d-none">
+              <i class="fab fa-linkedin text-primary"></i>
+              <a
+                href="https://www.linkedin.com/in/oburuephraim2"
+                target="_blank"
+                class="text-primary"
+                >LinkedIn Profile</a
+              >
+            </p>
+            <p>
+              <i class="fab fa-github text-dark"></i>
+              <a
+                href="https://github.com/oburuephraim"
+                target="_blank"
+                class="text-dark"
+                >GitHub Profile</a
+              >
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Portfolio section -->
+      <!-- Content column -->
+      <div class="col-md-8 p-2" style="overflow-x: hidden">
+        <div id="contentDiv" class="content text-center">
+          <span class="dancing-script-text">Welcome to My Portfolio</span>
+        </div>
+        <!-- Accordions -->
+        <div class="accordion accordion-flush my-4" id="aboutAccordion"></div>
+      </div>
     </div>
-    <div class="container mt-5" style="overflow-x: hidden">
-      <div class="header-section p-3">
-        <h4 class="display-6 fw-bold text">Frequently Asked Questions</h4>
-      </div>
+  </div>
+    <!-- Portfolio section -->
 
-      <div class="accordion myanimate" id="faqAccordion">
-        <!-- Question 1 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <span class="">Q: What systems do you build?</span>
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body">
-              I build a wide range of systems, including but not limited to web
-              applications, mobile apps, desktop software, embedded systems, and
-              IoT devices. My expertise covers various industries and
-              technologies to meet your specific needs.
-            </div>
+    <div class="py-5 shadow-lg" style="overflow-x: hidden">
+      <div class="container">
+        <h1 class="section-heading">My Creative Work</h1>
+
+        <div class="d-none d-md-block">
+          <!-- Grid layout for larger screens -->
+          <div class="row g-4">
+            <!-- Content dynamically loaded from JSON -->
           </div>
         </div>
-
-        <!-- Question 2 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              <span class="">
-                Q: What can I expect regarding my Git Repository?</span
-              >
-            </button>
-          </h2>
+        <div class="d-block d-md-none">
+          <!-- Carousel layout for smaller screens -->
           <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#faqAccordion"
+            id="creativeWorkCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
           >
-            <div class="accordion-body">
-              As a client, you can expect to utilize a Git repository to
-              organize and manage your codebase. This serves as a central hub
-              for tracking changes, collaborating on development, and ensuring
-              version control. You may hear about platforms like GitHub, GitLab,
-              or Bitbucket where your repository can be hosted.
+            <div class="carousel-inner">
+              <!-- Content dynamically loaded from JSON -->
             </div>
-          </div>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
             <button
-              class="accordion-button collapsed"
+              class="carousel-control-prev"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
+              data-bs-target="#creativeWorkCarousel"
+              data-bs-slide="prev"
             >
-              <span class="">
-                Q: How will I be involved in the development process?</span
-              >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
             </button>
-          </h2>
-          <div
-            id="collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingThree"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body">
-              You will be directly involved in regular interaction with the
-              development process. Whether it's through project management
-              tools, meetings, emails, or other means, you'll provide
-              requirements, feedback, and approvals throughout the development
-              journey.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 4 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
             <button
-              class="accordion-button collapsed"
+              class="carousel-control-next"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseFour"
-              aria-expanded="false"
-              aria-controls="collapseFour"
+              data-bs-target="#creativeWorkCarousel"
+              data-bs-slide="next"
             >
-              <span class="">
-                Q: What should I expect in terms of delivery?</span
-              >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
             </button>
-          </h2>
-          <div
-            id="collapseFour"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingFour"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body">
-              Upon completion of development and thorough testing, you can
-              expect to receive the final product. This could take the form of
-              executable files, installation packages, or access to a hosted
-              platform where you can begin using the software. The development
-              process ensures that the delivered product meets your expectations
-              and requirements.
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container mt-5 d-none" style="overflow-x: hidden">
-      <div class="d-flex align-items-center myanimate">
-        <button
-          class="btn btn-primary btn-open-modal"
-          data-src="software development contract.pdf"
-        >
-          software development contract
-        </button>
-        <button
-          class="btn btn-secondary btn-open-modal"
-          data-src="srs_template-ieee.pdf"
-        >
-          software requirements specification
-        </button>
-        <button
-          class="btn btn-primary btn-open-modal"
-          data-src="software design document template.pdf"
-        >
-          software design document
-        </button>
-      </div>
+
+    <!-- Skills Section -->
+    <div class="container p-5" id="skills">
+      <h2 class="section-heading">My Skills</h2>
+      <div class="row g-4" id="skillsSection"></div>
     </div>
 
-    <div class="container py-5" style="overflow-x: hidden">
-      <div class="header-section p-3">
-        <h1 class="display-6 fw-bold text">My Creative Work</h1>
-      </div>
-      <div class="row myanimate">
-        <div class="carousel-container overflow-hidden">
-          <div class="carousel-track d-flex">
-            <div class="card col-12 col-md-4 m-2">
-              <div class="card-body">
-                <h5 class="card-title">Social Teams</h5>
-                <img
-                  src="images/socialteams.PNG"
-                  style="width: 100%; height: 300px"
-                />
-                <button
-                  class="btn btn-primary btn-open-modal"
-                  data-src="https://socialteams.netlify.app/"
-                >
-                  Open
-                </button>
-                <p class="card-text"><i class="fab fa-facebook-square"></i></p>
-              </div>
-            </div>
-            <div class="card col-12 col-md-4 m-2">
-              <div class="card-body">
-                <h5 class="card-title">Elder Care Initiative</h5>
-                <img
-                  src="images/eldercare.PNG"
-                  style="width: 100%; height: 300px"
-                />
-                <button
-                  class="btn btn-primary btn-open-modal"
-                  data-src="https://eldercareinitiative.netlify.app/"
-                >
-                  Open
-                </button>
-                <p class="card-text"><i class="fas fa-users"></i></p>
-              </div>
-            </div>
-            <div class="card col-12 col-md-4 m-2">
-              <div class="card-body">
-                <h5 class="card-title">Blog Ruboni</h5>
-                <img
-                  src="images/blogruboni.PNG"
-                  style="width: 100%; height: 300px"
-                />
-                <button
-                  class="btn btn-primary btn-open-modal"
-                  data-src="https://blogruboni.netlify.app/"
-                >
-                  Open
-                </button>
-                <p class="card-text"><i class="fas fa-blog"></i></p>
-              </div>
-            </div>
-            <div class="card col-12 col-md-4 m-2">
-              <div class="card-body">
-                <h5 class="card-title">Meetings Manager</h5>
-                <img
-                  src="images/meetingsmanager.PNG"
-                  style="width: 100%; height: 300px"
-                />
-                <button
-                  class="btn btn-primary btn-open-modal"
-                  data-src="https://meetingsmanager.netlify.app/"
-                >
-                  Open
-                </button>
-                <p class="card-text"><i class="fas fa-calendar-alt"></i></p>
-              </div>
-            </div>
-            <div class="card col-12 col-md-4 m-2">
-              <div class="card-body">
-                <h5 class="card-title">Safe Sail</h5>
-                <img
-                  src="images/safesail.PNG"
-                  style="width: 100%; height: 300px"
-                />
-                <button
-                  class="btn btn-primary btn-open-modal"
-                  data-src="https://safesail.netlify.app/"
-                >
-                  Open
-                </button>
-                <p class="card-text"><i class="fas fa-ship"></i></p>
-              </div>
-            </div>
-            <!-- Other card elements -->
-          </div>
-        </div>
-        <!-- Buttons for navigation -->
-        <div class="container mt-2">
-          <div class="row">
-            <div class="col text-center">
-              <button id="prevButton" class="btn btn-primary">Previous</button>
-              <button id="nextButton" class="btn btn-primary ms-2">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container" style="overflow-x: hidden">
-      <hr />
-      <div class="footer-section py-3 text-center myanimate">
-        <p>&copy; 2024 Oburu Ephraim. All rights reserved.</p>
-      </div>
+    <!-- About Section -->
+    <div id="aboutSection" class="shadow-lg"></div>
+
+    <!-- Call to Action Section -->
+    <div class="container py-5 text-center" id="ctaSection"></div>
+
+    <!-- Dynamic Sections -->
+    <div id="dynamicSections" class="shadow-lg"></div>
+
+    <!-- Footer Section -->
+
+    <div class="gradient-section mb-5">
+      <p>&copy; 2024 Oburu Ephraim. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/oburuephraim" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/oburuephraim2" target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="mailto:oburuephraim1@example.com">Email Me</a>
+      </p>
     </div>
 
     <div
@@ -656,7 +411,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="profilePictureModalLabel">
-              Profile Picture
+              Oburu Ephraim
             </h5>
             <button
               type="button"
@@ -687,212 +442,282 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script>
-      const modalIframe = document.getElementById("modalIframe");
-      const modalButtons = document.querySelectorAll(".btn-open-modal");
+      document.addEventListener("DOMContentLoaded", () => {
+        const fetchAllRepos = async (username) => {
+          const repos = [];
+          let page = 1;
+          let hasMore = true;
 
-      modalButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const iframeSrc =
-            button.getAttribute("data-src") + "?t=" + new Date().getTime(); // Adding cache-busting parameter
-          modalIframe.onload = () => {
-            const modal = new bootstrap.Modal(
-              document.getElementById("exampleModal")
+          while (hasMore) {
+            const response = await fetch(
+              `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`
             );
-            modal.show();
-          };
-          modalIframe.src = iframeSrc;
-        });
-      });
+            const data = await response.json();
 
-      const carouselTrack = document.querySelector(".carousel-track");
-      const cards = document.querySelectorAll(".card");
-      const cardWidth = cards[0].offsetWidth;
-      let position = 0;
-
-      // Move the carousel automatically with adjustable speed
-      function moveCarouselAuto(speed) {
-        let intervalId; // Store the interval ID to enable pausing and resuming
-
-        function move(speed) {
-          position -= cardWidth;
-          carouselTrack.style.transition = `transform 0.5s ease`; // Convert speed to seconds
-          carouselTrack.style.transform = `translateX(${position}px)`;
-
-          // Check if any card is fully out of view
-          cards.forEach((card) => {
-            if (card.getBoundingClientRect().right < 0) {
-              moveCardToEnd(card);
+            if (data.length > 0) {
+              repos.push(...data);
+              page++;
+            } else {
+              hasMore = false;
             }
-          });
-        }
-        // Start moving the carousel
-        intervalId = setInterval(move, speed); // Speed in milliseconds
-
-        carouselTrack.addEventListener("mouseenter", () => {
-          clearInterval(intervalId);
-        });
-
-        // Resume carousel movement on mouse leave
-        carouselTrack.addEventListener("mouseleave", () => {
-          intervalId = setInterval(move, speed);
-        });
-      }
-
-      // Move the carousel to the next card
-      function moveNext() {
-        position -= cardWidth;
-        carouselTrack.style.transition = "transform 0.5s ease";
-        carouselTrack.style.transform = `translateX(${position}px)`;
-
-        // Check if any card is fully out of view
-        cards.forEach((card) => {
-          if (card.getBoundingClientRect().right < 0) {
-            moveCardToEnd(card);
           }
-        });
-      }
 
-      function movePrev() {
-        // Move the last card to the beginning of the track
-        const lastCard = document.querySelector(".card:last-child");
-        carouselTrack.insertBefore(lastCard, carouselTrack.firstElementChild);
-        position += cardWidth; // Adjust the position
+          return repos;
+        };
 
-        // Reset transition property
-        carouselTrack.style.transition = "none";
-        carouselTrack.style.transform = `translateX(${position}px)`;
+        fetch("content.json")
+          .then((response) => response.json())
+          .then(async (data) => {
+            // Populate personal information
+            document.querySelector(".card-title.text-primary").textContent =
+              data.personal.name;
+            document.querySelector(".text-muted").textContent =
+              data.personal.contactInfo;
+            document.querySelector(".fa-envelope + a").textContent =
+              data.personal.email.label;
+            document.querySelector(
+              ".fa-envelope + a"
+            ).href = `mailto:${data.personal.email.value}`;
+            document.querySelector(".fa-whatsapp + a").href =
+              data.personal.whatsapp.link;
+            document.querySelector(".fa-whatsapp + a").textContent =
+              data.personal.whatsapp.label;
+            document.querySelector(".fa-map-marker-alt + a").href =
+              data.personal.location.link;
+            document.querySelector(".fa-map-marker-alt + a").textContent =
+              data.personal.location.label;
 
-        // Check if any card is fully out of view
-        cards.forEach((card) => {
-          if (card.getBoundingClientRect().right < 0) {
-            moveCardToEnd(card);
-          }
-        });
+            // Populate portfolio section for larger screens
+            const portfolioContainer = document.querySelector(".row.g-4");
+            portfolioContainer.innerHTML = ""; // Clear existing content
 
-        // Adjust position to remove space in front
-        position -= cardWidth;
-        carouselTrack.style.transform = `translateX(${position}px)`;
-      }
+            // Add projects from content.json
+            data.portfolio.forEach((item) => {
+              const card = `
+                <div class="col-md-4">
+                  <div class="card h-100 shadow-sm">
+                    <img src="${item.image}" class="card-img-top" alt="${item.title}" loading="lazy" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">${item.title}</h5>
+                      <a href="${item.link}" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                  </div>
+                </div>`;
+              portfolioContainer.insertAdjacentHTML("beforeend", card);
+            });
 
-      function moveCardToEnd(card) {
-        const lastCard = document.querySelector(".card:last-child");
-        carouselTrack.insertBefore(card, lastCard.nextSibling);
-        position += cardWidth; // Adjust the position
+            // Fetch and add GitHub repositories
+            const repos = await fetchAllRepos("oburuephraim");
+            repos.forEach((repo) => {
+              const card = `
+                <div class="col-md-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">${repo.name}</h5>
+                      <p class="card-text">${
+                        repo.description || "No description available."
+                      }</p>
+                      <a href="${
+                        repo.html_url
+                      }" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                  </div>
+                </div>`;
+              portfolioContainer.insertAdjacentHTML("beforeend", card);
+            });
 
-        // Reset transition property
-        carouselTrack.style.transition = "none";
-        carouselTrack.style.transform = `translateX(${position}px)`;
-      }
+            // Populate carousel for smaller screens
+            const carouselInner = document.querySelector(
+              "#creativeWorkCarousel .carousel-inner"
+            );
+            carouselInner.innerHTML = ""; // Clear existing content
 
-      // Example: Move to next card on button click
-      document.getElementById("nextButton").addEventListener("click", () => {
-        moveNext();
-      });
+            // Add projects from content.json to carousel
+            data.portfolio.forEach((item, index) => {
+              const carouselItem = `
+                <div class="carousel-item ${index === 0 ? "active" : ""}">
+                  <div class="card">
+                    <img src="${item.image}" class="card-img-top" alt="${
+                item.title
+              }" loading="lazy" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">${item.title}</h5>
+                      <a href="${
+                        item.link
+                      }" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                  </div>
+                </div>`;
+              carouselInner.insertAdjacentHTML("beforeend", carouselItem);
+            });
 
-      // Example: Move to previous card on button click
-      document.getElementById("prevButton").addEventListener("click", () => {
-        movePrev();
-      }); // Pause the carousel movement on mouse hover
+            // Add GitHub repositories to carousel
+            repos.forEach((repo, index) => {
+              const carouselItem = `
+                <div class="carousel-item ${
+                  index === 0 && data.portfolio.length === 0 ? "active" : ""
+                }">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">${repo.name}</h5>
+                      <p class="card-text">${
+                        repo.description || "No description available."
+                      }</p>
+                      <a href="${
+                        repo.html_url
+                      }" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                  </div>
+                </div>`;
+              carouselInner.insertAdjacentHTML("beforeend", carouselItem);
+            });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // All card content is loaded, call moveCarouselAuto
+            // Populate "About Me" section
+            const aboutSection = data.sections.find(
+              (section) => section.id === "about"
+            );
+            if (aboutSection) {
+              const aboutContainer = document.querySelector("#aboutSection");
+              aboutContainer.innerHTML = `
+                <div class="container py-5" id="${aboutSection.id}">
+                  <h2 class="section-heading">${aboutSection.title}</h2>
+                  <p class="lead text-center">${aboutSection.content}</p>
+                </div>`;
+            }
 
-        moveCarouselAuto(5000);
-      });
+            // Populate "Let's Work Together" section
+            const ctaSection = data.sections.find(
+              (section) => section.id === "cta"
+            );
+            if (ctaSection) {
+              const ctaContainer = document.querySelector("#ctaSection");
+              ctaContainer.innerHTML = `
+                <h1 class="display-6 fw-bold">${ctaSection.title}</h1>
+                <p class="lead">${ctaSection.content}</p>
+                <a href="mailto:${data.cta.hireMeEmail}" class="btn btn-primary btn-lg me-3">${data.cta.hireMeLabel}</a>
+                <a href="${data.cta.resumeLink}" class="btn btn-secondary btn-lg" download>${data.cta.downloadResumeLabel}</a>`;
+            }
 
-      // Function to start the typing animation when the element comes into view
-      function observeIntersection(elements, options, classNames) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              if (Array.isArray(classNames)) {
-                classNames.forEach((className) => {
-                  entry.target.classList.add(className);
-                });
-              } else {
-                entry.target.classList.add(classNames);
-              }
+            // Populate testimonials section
+            const testimonialsSection = data.sections.find(
+              (section) => section.id === "testimonials"
+            );
+            if (testimonialsSection) {
+              const dynamicSections =
+                document.querySelector("#dynamicSections");
+              const testimonialsHTML = `
+                <div class="container py-5" id="${testimonialsSection.id}">
+                  <h2 class="section-heading">${testimonialsSection.title}</h2>
+                  <div class="row">
+                    ${testimonialsSection.content
+                      .map(
+                        (testimonial) => `
+                      <div class="col-md-6">
+                        <blockquote class="blockquote">
+                          <p>${testimonial.feedback}</p>
+                          <footer class="blockquote-footer">${testimonial.name}</footer>
+                        </blockquote>
+                      </div>`
+                      )
+                      .join("")}
+                  </div>
+                </div>`;
+              dynamicSections.insertAdjacentHTML("beforeend", testimonialsHTML);
+            }
 
-              // Once animation is complete, remove the classes
-              entry.target.addEventListener(
-                "animationend",
-                () => {
-                  // Check if the element is still in the viewport
-                  if (entry.isIntersecting) {
-                    if (Array.isArray(classNames)) {
-                      classNames.forEach((className) => {
-                        entry.target.classList.remove(className);
-                      });
-                    } else {
-                      entry.target.classList.remove(classNames);
-                    }
-                  }
-                },
-                { once: true }
+            // Populate certifications section
+            const certificationsSection = data.sections.find(
+              (section) => section.id === "certifications"
+            );
+            if (certificationsSection) {
+              const dynamicSections =
+                document.querySelector("#dynamicSections");
+              const certificationsHTML = `
+                <div class="container py-5" id="${certificationsSection.id}">
+                  <h2 class="section-heading">${
+                    certificationsSection.title
+                  }</h2>
+                  <ul class="list-group">
+                    ${certificationsSection.content
+                      .map(
+                        (cert) => `
+                      <li class="list-group-item">
+                        <strong>${cert.name}</strong> - ${cert.issuer} (${cert.year})
+                      </li>`
+                      )
+                      .join("")}
+                  </ul>
+                </div>`;
+              dynamicSections.insertAdjacentHTML(
+                "beforeend",
+                certificationsHTML
               );
             }
-          });
-        }, options);
 
-        elements.forEach((element) => {
-          observer.observe(element);
-        });
-      }
+            // Populate accordion content
+            const accordionContainer =
+              document.querySelector("#aboutAccordion");
+            accordionContainer.innerHTML = ""; // Clear existing content
+            data.accordion.forEach((item, index) => {
+              const accordionHTML = `
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading${index}">
+                    <button
+                      class="accordion-button ${index === 0 ? "" : "collapsed"}"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse${index}"
+                      aria-expanded="${index === 0 ? "true" : "false"}"
+                      aria-controls="collapse${index}"
+                    >
+                      <span class="fw-bold">${item.title}</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse${index}"
+                    class="accordion-collapse collapse ${
+                      index === 0 ? "show" : ""
+                    }"
+                    aria-labelledby="heading${index}"
+                    data-bs-parent="#aboutAccordion"
+                  >
+                    <div class="accordion-body">
+                      ${item.content}
+                    </div>
+                  </div>
+                </div>`;
+              accordionContainer.insertAdjacentHTML("beforeend", accordionHTML);
+            });
 
-      // Usage example:
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.2,
-      };
-      // Usage examples:
-      const textElements = document.querySelectorAll(".text");
-      observeIntersection(textElements, observerOptions, "animate");
-
-      const myElements = document.querySelectorAll(".myanimate");
-      observeIntersection(myElements, observerOptions, [
-        "animate__animated",
-        "animate__fadeInRight",
-      ]);
-
-      const content = [
-        "<span class='transition-item dancing-script-text' style='color: blue; font-weight: bold; font-style: italic;'>Hi</span>",
-        "<span class='transition-item dancing-script-text' style='color: green;font-weight: bold; font-style: italic;'>Check Out</span>",
-        "<span class='transition-item dancing-script-text' style='color: red; font-weight: bold; font-style: italic;'>My Portfolio</span>",
-        "<span class='transition-item dancing-script-text' style='color: orange; font-weight: bold; font-style: italic;'>Reach Out</span>",
-        "<span class='transition-item dancing-script-text' style='color: purple; font-weight: bold; font-style: italic;'>And Come</span>",
-        "<span class='transition-item dancing-script-text' style='color: brown; font-weight: bold; font-style: italic;'>Again for</span>",
-        "<span class='transition-item dancing-script-text' style='color: teal; font-weight: bold; font-style: italic;'>More</span>",
-      ];
-      // Array of content to display
-      let currentIndex = 0; // Index to keep track of the current item being displayed
-
-      // Function to display content one at a time
-      function displayContent() {
-        const container = document.getElementById("contentDiv"); // Get the specific div by its ID
-
-        // Function to update the displayed content
-        function updateContent() {
-          container.innerHTML = content[currentIndex];
-          if (currentIndex === content.length - 1) {
-            // If it's the last item, wait longer before looping back
-            setTimeout(() => {
-              currentIndex = 0; // Reset to the beginning of the array
-            }, 5000); // Wait 5 seconds
-          } else {
-            currentIndex++; // Move to the next item in the array
-          }
-        }
-
-        // Call updateContent initially
-        updateContent();
-
-        // Set interval to update the displayed content every 2 seconds
-        setInterval(updateContent, 1000);
-      }
-
-      // Call the function to display content
-      displayContent();
+            // Populate skills section
+            const skillsContainer = document.querySelector("#skillsSection");
+            skillsContainer.innerHTML = ""; // Clear existing content
+            data.skills.forEach((skillCategory) => {
+              const categoryHTML = `
+                <div class="col-md-6">
+                  <h5>${skillCategory.category}</h5>
+                  ${skillCategory.skills
+                    .map(
+                      (skill) => `
+                    <div class="mb-3">
+                      <label>${skill.name}</label>
+                      <div class="progress">
+                        <div class="progress-bar ${skill.color}" style="width: ${skill.percentage}%">${skill.percentage}%</div>
+                      </div>
+                    </div>`
+                    )
+                    .join("")}
+                </div>`;
+              skillsContainer.insertAdjacentHTML("beforeend", categoryHTML);
+            });
+          })
+          .catch((error) =>
+            console.error(
+              "Error loading content.json or GitHub repositories:",
+              error
+            )
+          );
+      });
     </script>
   </body>
 </html>

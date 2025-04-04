@@ -1,0 +1,175 @@
+{
+    "personal": {
+      "name": "Oburu Ephraim",
+      "contactInfo": "Contact Information",
+      "email": {
+        "label": "Email Me",
+        "value": "oburuephraim1@gmail.com"
+      },
+      "whatsapp": {
+        "label": "Chat on WhatsApp",
+        "link": "https://wa.me/256777233322"
+      },
+      "location": {
+        "label": "View Location",
+        "link": "https://maps.google.com/?q=38b+Ssebowa+Rd,+Kampala"
+      }
+    },
+    "portfolio": [
+      {
+        "title": "Social Teams",
+        "image": "images/socialteams.PNG",
+        "link": "https://socialteams.netlify.app/"
+      },
+      {
+        "title": "Elder Care Initiative",
+        "image": "images/eldercare.PNG",
+        "link": "https://eldercareinitiative.netlify.app/"
+      },
+      {
+        "title": "Blog Ruboni",
+        "image": "images/blogruboni.PNG",
+        "link": "https://blogruboni.netlify.app/"
+      },
+      {
+        "title": "Task Manager App",
+        "image": "images/taskmanager.PNG",
+        "link": "https://taskmanagerapp.netlify.app/"
+      },
+      {
+        "title": "E-Commerce Platform",
+        "image": "images/ecommerce.PNG",
+        "link": "https://ecommerceplatform.netlify.app/"
+      }
+    ],
+    "sections": [
+      {
+        "id": "about",
+        "title": "About Me",
+        "content": "I’m Oburu Ephraim — a software engineer, data analyst, and tech entrepreneur passionate about building practical, scalable digital solutions. I specialize in full-stack web development, robust database systems, and GIS-integrated platforms. I also help individuals and teams gain real-world tech skills through mentorship, training, and collaborative projects. Whether you're building a startup, upskilling in software, or seeking tailored data solutions — I deliver tools that work and empower."
+      },
+      {
+        "id": "cta",
+        "title": "Let's Work Together",
+        "content": "Need a website, a database system, or a complete digital solution? Looking to skill up, start a tech project, or need help guiding a team through development? Whether you're a solo learner, a startup, or an enterprise — I offer hands-on collaboration, mentorship, and custom system design. Let’s build smart, sustainable, and impactful solutions together."
+      },
+      {
+        "id": "testimonials",
+        "title": "What People Say",
+        "content": [
+          {
+            "name": "John Doe",
+            "feedback": "Ephraim is a highly skilled developer who delivered exceptional results on our project."
+          },
+          {
+            "name": "Jane Smith",
+            "feedback": "Working with Ephraim was a pleasure. His attention to detail and expertise are unmatched."
+          }
+        ]
+      },
+      {
+        "id": "certifications",
+        "title": "Certifications",
+        "content": [
+          {
+            "name": "Full-Stack Web Development",
+            "issuer": "Coursera - Meta",
+            "year": 2023
+          },
+          {
+            "name": "Database Management & SQL Specialization",
+            "issuer": "University of Michigan",
+            "year": 2022
+          },
+          {
+            "name": "Python for Data Science",
+            "issuer": "IBM Skills Network",
+            "year": 2022
+          },
+          {
+            "name": "Geospatial Data Analysis with QGIS",
+            "issuer": "GISGeography Training",
+            "year": 2021
+          }
+        ]
+      }
+    ],
+    "accordion": [
+      {
+        "title": "Software Development Expertise",
+        "content": "<ul><li><strong>Scalable Systems:</strong> I architect and develop scalable web applications tailored for performance and future growth.</li><li><strong>Efficient Database Design:</strong> I build well-structured, secure databases optimized for speed, integrity, and multi-user collaboration.</li><li><strong>Custom Websites:</strong> I design and deploy professional websites for businesses, institutions, and individuals — aligned to your brand and purpose.</li></ul>"
+      },
+      {
+        "title": "Data Analysis and Visualization Proficiency",
+        "content": "<ul><li><strong>Capacity Building:</strong> I mentor students, professionals, and teams to unlock the power of data and modern analytics tools.</li><li><strong>Insightful Analysis:</strong> I transform raw data into actionable insights using statistical and machine learning techniques.</li><li><strong>Engaging Visuals:</strong> I design dashboards, charts, and geospatial visuals that clearly communicate the story behind your data.</li></ul>"
+      },
+      {
+        "title": "Portfolio Development",
+        "content": "I craft visually striking and content-rich digital portfolios tailored to developers, professionals, and creatives. I also guide learners and teams on how to package their own projects into compelling portfolios that win attention and trust."
+      }
+    ],
+    "footerLinks": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/oburuephraim"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/oburuephraim2"
+      },
+      {
+        "label": "Email Me",
+        "url": "mailto:oburuephraim1@example.com"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/oburuephraim"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://instagram.com/oburuephraim"
+      }
+    ],
+    "styles": {
+      "fontFamily": "'Poppins', sans-serif",
+      "textColor": "#333",
+      "backgroundColor": "#f4f4f9"
+    },
+    "skills": [
+      {
+        "category": "Technical Skills",
+        "skills": [
+          { "name": "JavaScript", "percentage": 90, "color": "bg-primary" },
+          { "name": "Python", "percentage": 85, "color": "bg-success" },
+          { "name": "Database Design", "percentage": 80, "color": "bg-info" }
+        ]
+      },
+      {
+        "category": "Soft Skills",
+        "skills": [
+          { "name": "Communication", "percentage": 95, "color": "bg-warning" },
+          { "name": "Problem-Solving", "percentage": 90, "color": "bg-danger" },
+          { "name": "Teamwork", "percentage": 85, "color": "bg-secondary" }
+        ]
+      },
+      {
+        "category": "Frameworks & Libraries",
+        "skills": [
+          { "name": "React", "percentage": 85, "color": "bg-primary" },
+          { "name": "Django", "percentage": 80, "color": "bg-success" },
+          { "name": "Bootstrap", "percentage": 90, "color": "bg-info" }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Let's Work Together",
+      "content": "Need a website, a database system, or a complete digital solution? Looking to skill up, start a tech project, or need help guiding a team through development? Whether you're a solo learner, a startup, or an enterprise — I offer hands-on collaboration, mentorship, and custom system design. Let’s build smart, sustainable, and impactful solutions together.",
+      "hireMeLabel": "Hire Me",
+      "hireMeEmail": "oburuephraim1@gmail.com",
+      "downloadResumeLabel": "Download Resume",
+      "resumeLink": "resume.pdf",
+      "scheduleMeetingLabel": "Schedule a Meeting",
+      "scheduleMeetingLink": "https://calendly.com/oburuephraim"
+    }
+  }
+  

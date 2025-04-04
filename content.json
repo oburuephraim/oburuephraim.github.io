@@ -119,7 +119,7 @@
       },
       {
         "label": "Email Me",
-        "url": "mailto:oburuephraim1@example.com"
+        "url": "mailto:oburuephraim1@gmail.com"
       },
       {
         "label": "Twitter",
@@ -136,31 +136,60 @@
       "backgroundColor": "#f4f4f9"
     },
     "skills": [
-      {
-        "category": "Technical Skills",
-        "skills": [
-          { "name": "JavaScript", "percentage": 90, "color": "bg-primary" },
-          { "name": "Python", "percentage": 85, "color": "bg-success" },
-          { "name": "Database Design", "percentage": 80, "color": "bg-info" }
-        ]
-      },
-      {
-        "category": "Soft Skills",
-        "skills": [
-          { "name": "Communication", "percentage": 95, "color": "bg-warning" },
-          { "name": "Problem-Solving", "percentage": 90, "color": "bg-danger" },
-          { "name": "Teamwork", "percentage": 85, "color": "bg-secondary" }
-        ]
-      },
-      {
-        "category": "Frameworks & Libraries",
-        "skills": [
-          { "name": "React", "percentage": 85, "color": "bg-primary" },
-          { "name": "Django", "percentage": 80, "color": "bg-success" },
-          { "name": "Bootstrap", "percentage": 90, "color": "bg-info" }
-        ]
-      }
-    ],
+  {
+    "category": "Programming & Scripting",
+    "skills": [
+      { "name": "Python", "percentage": 90, "color": "bg-success" },
+      { "name": "JavaScript", "percentage": 85, "color": "bg-primary" },
+      { "name": "PHP", "percentage": 80, "color": "bg-info" },
+      { "name": "C", "percentage": 75, "color": "bg-warning" }
+    ]
+  },
+  {
+    "category": "Frameworks & Libraries",
+    "skills": [
+      { "name": "React.js", "percentage": 85, "color": "bg-primary" },
+      { "name": "Express.js", "percentage": 80, "color": "bg-success" },
+      { "name": "Bootstrap", "percentage": 90, "color": "bg-info" },
+      { "name": "Tailwind CSS", "percentage": 85, "color": "bg-secondary" }
+    ]
+  },
+  {
+    "category": "Database & Backend Systems",
+    "skills": [
+      { "name": "MySQL", "percentage": 90, "color": "bg-success" },
+      { "name": "PostgreSQL", "percentage": 85, "color": "bg-info" },
+      { "name": "MongoDB", "percentage": 80, "color": "bg-warning" },
+      { "name": "Firebase", "percentage": 75, "color": "bg-primary" }
+    ]
+  },
+  {
+    "category": "GIS & Remote Sensing",
+    "skills": [
+      { "name": "QGIS", "percentage": 90, "color": "bg-success" },
+      { "name": "ArcGIS", "percentage": 85, "color": "bg-info" },
+      { "name": "Field Apps / KoboToolbox", "percentage": 80, "color": "bg-warning" }
+    ]
+  },
+  {
+    "category": "Hardware & Embedded Systems",
+    "skills": [
+      { "name": "Arduino", "percentage": 85, "color": "bg-primary" },
+      { "name": "Raspberry Pi", "percentage": 80, "color": "bg-success" },
+      { "name": "IoT System Design", "percentage": 75, "color": "bg-info" }
+    ]
+  },
+  {
+    "category": "Soft Skills & Leadership",
+    "skills": [
+      { "name": "Communication", "percentage": 95, "color": "bg-warning" },
+      { "name": "Team Leadership", "percentage": 90, "color": "bg-danger" },
+      { "name": "Problem Solving", "percentage": 90, "color": "bg-secondary" },
+      { "name": "Training & Mentorship", "percentage": 85, "color": "bg-success" }
+    ]
+  }
+]
+,
     "cta": {
       "title": "Let's Work Together",
       "content": "Need a website, a database system, or a complete digital solution? Looking to skill up, start a tech project, or need help guiding a team through development? Whether you're a solo learner, a startup, or an enterprise — I offer hands-on collaboration, mentorship, and custom system design. Let’s build smart, sustainable, and impactful solutions together.",
